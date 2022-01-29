@@ -22,23 +22,23 @@ person_not_exist：https://thispersondoesnotexist.com
 可以下载一些不存在的人，通过调用模型得到每个人的embedding，从而从图片/视频/摄像头3种方式搭建虚拟的员工人脸数据库。
 
 通过GUI窗口选择静态图片的单人/多人路径，再通过每个员工10张静态图片提取平均emb：  
-<img src='note/gui.png' width=500></img>
-<img src='note/face_image.png' width=500></img>
+<img src='note/gui.png'></img>
+<img src='note/face_image.png'></img>
 
 或者通过截取10张动态视频/摄像头截图提取平均emb，留意窗口上方的文字：
 - Please hold on for us to recognize your face. 此时模型在识别当中
 - Recognition finished! Please press "q" to quit :) 模型提取emb完毕，可随时按q退出页面
 
-<img src='note/recognizing.png' width=400></img>
-<img src='note/recognized.png' width=400></img>
+<img src='note/recognizing.png' width=500></img>
+<img src='note/recognized.png' width=500></img>
 
 
 ### Prediction
 进行活体人脸识别，当识别为非活体时，用红框表示；当识别为非数据库上的人，或者非特定刷卡人时，用红框表示；活体且符合要求的用绿框表示，同时输出相似度和活体概率：
 - N vs N：遍历数据库匹配
 - 1 vs N：通过比对提供的刷卡人身份，判断是否为同一个人
-<img src='note/same.png'></img>
-<img src='note/not_same.png'></img>
+<img src='note/same.png' width=400></img>
+<img src='note/not_same.png' width=400></img>
 
 
 
