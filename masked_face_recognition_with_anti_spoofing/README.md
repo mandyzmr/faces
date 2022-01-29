@@ -35,8 +35,8 @@ person_not_exist：https://thispersondoesnotexist.com
 
 ### Prediction
 进行活体人脸识别，当识别为非活体时，用红框表示；当识别为非数据库上的人，或者非特定刷卡人时，用红框表示；活体且符合要求的用绿框表示，同时输出相似度和活体概率：
-- N vs N：遍历数据库匹配
-- 1 vs N：通过比对提供的刷卡人身份，判断是否为同一个人
+- N vs N：遍历数据库匹配.  
+- 1 vs N：通过比对提供的刷卡人身份，判断是否为同一个人.   
 <img src='note/same.png' width=400></img>
 <img src='note/not_same.png' width=400></img>
 
