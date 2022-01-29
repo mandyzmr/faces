@@ -17,7 +17,7 @@ class MaskedFaceRecognition():
         # 加载预训练模型
         self.model = get_model(name='resnet50', embedding_dim=128, n_classes=500, att_model=True, 
                         cbam=True, softmax_criterion=False, att_criterion=False, pretrained=False)
-        pretrained_path = os.path.join(current_dir, 'running_log','resnet50_att_cbam_masked_128', 'checkpoint', 'global_max_auc_model_3.pth')
+        pretrained_path = os.path.join(current_dir, 'running_log','resnet50_att_cbam_masked_128', 'checkpoint', 'global_max_auc_model.pth')
         checkpoint = torch.load(pretrained_path, device)
         self.model = load_model_checkpoint(self.model, checkpoint, device) 
         self.thres = 1.26 #根据最优模型定下来的dist threshold

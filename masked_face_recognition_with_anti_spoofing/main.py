@@ -25,8 +25,8 @@ class MaskedFaceRecognition_AntiSpoofing():
         self.detector = detector #dlib.get_frontal_face_detector() # 人脸检测模型
         self.predictor = predictor #predictodlib.shape_predictor('shape_predictor_68_face_landmarks.dat') #68个关键点检测模型
         self.anti_spoofing = FaceAntiSpoofing() #活体检测模型
-        # self.recognizer = recognizer #dlib.face_recognition_model_v1('dlib_face_recognition_resnet_model_v1.dat') #人脸特征提取模型
-        self.recognizer = MaskedFaceRecognition() #遮挡状态下的人脸特征提取模型
+        self.recognizer = recognizer #dlib.face_recognition_model_v1('dlib_face_recognition_resnet_model_v1.dat') #人脸特征提取模型
+        # self.recognizer = MaskedFaceRecognition() #遮挡状态下的人脸特征提取模型
         self.door_open = False #门禁系统
         self.fake = False #不匹配
         try:
@@ -204,13 +204,13 @@ class MaskedFaceRecognition_AntiSpoofing():
 
 if __name__=='__main__':
     model = MaskedFaceRecognition_AntiSpoofing()
-    # emb =  model.face_recog('testing/unmasked.mp4')
+    # emb =  model.face_recog('testing/news.move')
     # face_database = {}
     # face_database['Mandy'] = emb  
 
     # 加载已有的database
     with open('IT_face_database.pkl', mode='rb') as f:
         face_database = pickle.load(f)
-    emb = model.face_recog('testing/unmasked.mp4', face_database=face_database, save=True)
+    emb = model.face_recog('testing/news.mov', face_database=face_database, save=True)
 
 
