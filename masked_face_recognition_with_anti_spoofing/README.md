@@ -22,15 +22,15 @@ person_not_exist：https://thispersondoesnotexist.com
 可以下载一些不存在的人，通过调用模型得到每个人的embedding，从而从图片/视频/摄像头3种方式搭建虚拟的员工人脸数据库。
 
 通过GUI窗口选择静态图片的单人/多人路径，再通过每个员工10张静态图片提取平均emb：  
-<img src='note/gui.png'></img>
-<img src='note/face_image.png'></img>
+<img src='note/gui.png' width=500></img>
+<img src='note/face_image.png' width=500></img>
 
 或者通过截取10张动态视频/摄像头截图提取平均emb，留意窗口上方的文字：
 - Please hold on for us to recognize your face. 此时模型在识别当中
 - Recognition finished! Please press "q" to quit :) 模型提取emb完毕，可随时按q退出页面
 
-<img src='note/recognizing.png'></img>
-<img src='note/recognized.png'></img>
+<img src='note/recognizing.png' width=400></img>
+<img src='note/recognized.png' width=400></img>
 
 
 ### Prediction
